@@ -76,14 +76,12 @@ workingHours.forEach(function (timeBlock) {
 // Save button event
 $(".saveBtn").on("click", function (event) {
     event.preventDefault();
-    debugger;
     var index = $(this).siblings(".description").attr("id") - 1;
     workingHours[index].todo = $(this).siblings(".description").val();
 
     // Make sure we update data and dispaly
     saveWorkingHours();
     displayWorkingHours;
-    // loadWorkingHours();
 })
 
 // Initialize the page
